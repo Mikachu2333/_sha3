@@ -19,3 +19,4 @@ STYLE: `<{FILENAME}> SHA3_256={VALUE}`
 ## Known Bugs
 1. file with no content would be ignore
 2. some extremely special filename would make it crash, e.g. `"` (This is a file name)
+3. On X11, clipboard would not be changed for the bug of arboard ( https://github.com/1Password/arboard/issues/143 )
