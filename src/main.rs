@@ -10,8 +10,8 @@ fn main() -> io::Result<()> {
     let binding = std::env::current_exe().unwrap();
     let folder_path = binding.parent().unwrap();
 
-    if !folder_path.join("YuanShen.exe").exists(){
-        return Error::from("Path Wrong");
+    if !folder_path.join("YuanShen.exe").exists() {
+        return Err(Error::new(io::ErrorKind::Other, "chunks dir not found."));
     }
 
     let mut original_set: HashSet<String> = HashSet::new();
